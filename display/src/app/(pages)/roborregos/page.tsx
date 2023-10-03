@@ -1,9 +1,18 @@
+import Image from 'next/image'
+import logo from '/Users/fsp/Roborregos/HRI_Home/Display/display/public/images/roborregos_logo.png'
 
 const ControlPage = () => {
     return (
-        <div>
-            aqui el logo de roborregos
+        <div 
+         className="bg-black ...">
+            <Image 
+             src={logo} 
+             fill={true}
+             alt="RoBorregos Logo" 
+             className="bg-black object-contain ..."
+            />
         </div>
+
     )
 }
 
