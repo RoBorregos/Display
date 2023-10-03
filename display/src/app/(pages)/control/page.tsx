@@ -1,9 +1,12 @@
-
+import RosComponent from "../../components/example";
 const ControlPage = () => {
     return (
-        <div>
-            aqui la camara
-        </div>
+        <>
+            <div>
+                aqui la camara
+            </div>
+            <RosComponent />
+        </>
     )
 }
 
