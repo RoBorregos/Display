@@ -1,9 +1,19 @@
+'use client'
+
+import NavBar from "rbrgs/app/components/NavButton";
 
 const ControlPage = () => {
     return (
-        <div>
-            aqui la camara
-        </div>
+        <> 
+            <div>
+                aqui el control
+            </div>
+            <NavBar
+             icon="/images/roborregos_logo.png"
+             url="/"/>
+            
+        </>
+        
     )
 }
 
