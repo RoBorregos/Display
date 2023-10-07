@@ -1,21 +1,27 @@
-'use client'
+'use client';
 import Image from 'next/image'
-import Caja from './components/action'
+import { useRouter } from 'next/navigation'
+
 
 export default function Home() {
 
-  return (
+  const router = useRouter()
 
-    <div
-      className="bg-gray-800 ...">
+  const handleClick = () => {
+    router.push('/control')
+  }
+
+  return (
+    <button
+      className="bg-black ..."
+      onClick={handleClick}>
       <Image
         src="/images/roborregos_logo.png"
         fill={true}
-        alt="RoBorregos Logo"
+        alt="RoBorregos_Logo"
         className="bg-black object-contain ..."
       />
-      {/* <Caja nombre='Paco' />
-      <Caja nombre='ale' /> */}
-    </div>
+
+    </button>
   )
 }
