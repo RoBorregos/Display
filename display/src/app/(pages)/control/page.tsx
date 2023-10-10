@@ -7,6 +7,7 @@ import { BsSignStop } from "react-icons/bs";
 import Header from "rbrgs/app/components/header";
 import NavBar from "rbrgs/app/components/NavButton";
 
+
 const ControlPage = () => {
     const actions = [
         { label: "Move to ", description: "Make the robot move to a set location", icon: FiMapPin },
@@ -27,6 +28,7 @@ const ControlPage = () => {
             </div>
 
         </div>
+
     )
 }
 
