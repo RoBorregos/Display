@@ -1,16 +1,8 @@
-'use client';
+'use client'
 import { useState } from 'react'
 import ROSLIB from 'roslib'
 
-
-interface SelectItemProps {
-    label: string;
-    onClick: () => void;
-}
-
-
-
-const SelectItem: React.FC<SelectItemProps> = ({ label, onClick }) => {
+const RosComponent = () => {
     const [status, setStatus] = useState("Not connected")
     const ros = new ROSLIB.Ros({ encoding: 'ascii' } as any)
     const [linear, setLinear] = useState({ x: 0, y: 0, z: 0 })
@@ -57,13 +49,14 @@ const SelectItem: React.FC<SelectItemProps> = ({ label, onClick }) => {
         cmdVel.publish(data)
     }    
 
+
     return (
         <div>
-            <button onClick={publish} className="text-gray-100 bg-neutral-800 hover:bg-neutral-700 my-4 mx-8 p-4 rounded-xl ring-1 ring-offset-0 ring-neutral-500 flex flex-col justify-center w-full">
-                {label}
-            </button>
+            hi
+            <button onClick={() => publish()}>connect</button>
         </div>
     )
+
 }
 
-export default SelectItem;
+export default RosComponent;
