@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import ROSLIB from 'roslib'
 
-const RosComponent = () => {
+const RosPub = () => {
     const [status, setStatus] = useState("Not connected")
     const ros = new ROSLIB.Ros({ encoding: 'ascii' } as any)
     const [linear, setLinear] = useState({ x: 0, y: 0, z: 0 })
@@ -58,4 +58,4 @@ const RosComponent = () => {
 
 }
 
-export default RosComponent;
+export default RosPub;

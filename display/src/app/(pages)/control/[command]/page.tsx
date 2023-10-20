@@ -12,7 +12,7 @@ const MoveTo = async (params: any) => {
     const description = info?.description || "";
 
     const handleClick = () => {
-
+ 
     }
     return (
         <div className="p-20 flex flex-col justify-between h-screen">
