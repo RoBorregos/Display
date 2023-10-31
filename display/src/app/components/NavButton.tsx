@@ -19,8 +19,8 @@ const NavButton: React.FC<NBProps> = ({ route }) => {
 
     <button 
       onClick={handleClick} 
-      className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-7 pl-12 flex-auto">
-        <HiMiniInformationCircle className="text-4xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+      className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto">
+        <HiMiniInformationCircle className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
           />
       </button>
         

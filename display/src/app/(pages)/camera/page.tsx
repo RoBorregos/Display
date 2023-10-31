@@ -23,18 +23,18 @@ const CameraPage = () => {
                   />
               </button>
   
-              <button className="bg-[#a4abc8] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-7 px-12 flex-auto">
-                <BsCameraFill className="text-4xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+              <button className="bg-[#a4abc8] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto">
+                <BsCameraFill className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
                   />
               </button>
   
-              <button className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-7 px-12 flex-auto">
-                <FaMapLocationDot className="text-4xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+              <button className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto">
+                <FaMapLocationDot className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
                   />
               </button>
   
-              <button className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-7 px-12 flex-auto">
-                <GiGrab className="text-4xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+              <button className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto">
+                <GiGrab className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
                   />
               </button>
   
