@@ -1,24 +1,28 @@
 'use client'
 import { useRouter } from "next/navigation";
+import { HiMiniInformationCircle } from "react-icons/hi2";
 
 interface NBProps {
-    label: string;
-    icon: any;
+    route : string;
+    image?: any;
+    icon?: any;
 }
 
-const NavButton: React.FC<NBProps> = ({ label, icon: Icon }) => {
+const NavButton: React.FC<NBProps> = ({ route }) => {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push(`/${label}`)
+        router.push(`/${route}`)
     }
     
     return (
-        <button 
-          onClick={handleClick} 
-          className="mx-12 bg-[#707588] rounded hover:bg-sky-700 py-4 px-4">
-            <Icon className="text-6xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"/>
-        </button>
+
+    <button 
+      onClick={handleClick} 
+      className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-7 pl-12 flex-auto">
+        <HiMiniInformationCircle className="text-4xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+          />
+      </button>
         
     )
 }
