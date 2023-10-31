@@ -1,32 +1,25 @@
 'use client'
-import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+import { useRouter } from "next/navigation";
 
-interface NavProps {
-    icon: string;
-    url: string;
+interface NBProps {
+    label: string;
+    icon: any;
 }
 
-const NavButton:React.FC<NavProps> = ({icon, url}) => {
-
-    const router = useRouter()
+const NavButton: React.FC<NBProps> = ({ label, icon: Icon }) => {
+    const router = useRouter();
 
     const handleClick = () => {
-        router.push(url)
+        router.push(`/${label}`)
     }
-
+    
     return (
         <button 
-         className="bg-black ..."
-         onClick={handleClick}>
-            <Image 
-             src={icon}
-             height={50}
-             width={50}
-             alt="Nav_Icon" 
-             className="bg-black object-contain ..."
-            />
+          onClick={handleClick} 
+          className="mx-12 bg-[#707588] rounded hover:bg-sky-700 py-4 px-4">
+            <Icon className="text-6xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"/>
         </button>
+        
     )
 }
 
