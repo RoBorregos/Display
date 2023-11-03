@@ -2,9 +2,10 @@
 export const getInfo = async (id:string) => {
     try {
         switch(id) {
-            case "moveto":
+            case "go":
                 return {
-                    command: "Move to",
+                    title: "Go to",
+                    command: "go ",
                     items: ["Printers" , "Home", "Desks"],
                     description: "Select the destination for the robot"
                 }
@@ -12,10 +13,39 @@ export const getInfo = async (id:string) => {
 
             case "grab":
                 return {
-                    command: "Grab",
+                    title: "Grab",
+                    command: "grab ",
                     items: ["Pen", "Pencil", "Paper"],
                     description: "Select the object for the robot to grab"
                 }
+            break;
+
+            case "put":
+                return {
+                    title: "Put",
+                    command: "put ",
+                    items: [],
+                    description: "Stopping the robot"
+                }
+            break;
+
+            case "find":
+                return {
+                    title: "Find",
+                    command: "find ",
+                    items: ["Nose", "A alguien?", "A un lugar"],
+                    description: "Select the destination for the robot"
+                }
+            break;
+
+            case "introduce": 
+                return {
+                    title: "Introduce",
+                    command: "introduce",
+                    items: ["Myself", "Yourself", "Someone"],
+                    description: "Select the object for the robot to grab"
+                }
+            
             break;
 
             case "stop":
@@ -23,14 +53,6 @@ export const getInfo = async (id:string) => {
                     command: "Stop",
                     items: [],
                     description: "Stopping the robot"
-                }
-            break;
-
-            case "deliver":
-                return {
-                    command: "Deliver",
-                    items: ["Nose", "A alguien?", "A un lugar"],
-                    description: "Select the destination for the robot"
                 }
         }
 
