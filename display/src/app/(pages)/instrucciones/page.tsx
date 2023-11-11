@@ -1,3 +1,4 @@
+import NavBar from "rbrgs/app/components/NavBar"
 
 const ControlPage = () => {
     const useCommands = [{
@@ -5,9 +6,12 @@ const ControlPage = () => {
     }]
     
     return (
-        <div>
-            aqui la camara
-        </div>
+        <>
+            <NavBar />
+            <div>
+                aqui la camara
+            </div>
+        </>
     )
 }
 
