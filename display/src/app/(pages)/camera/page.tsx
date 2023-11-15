@@ -4,7 +4,6 @@ import { GiRobotGrab } from "react-icons/gi";
 import { GoPackageDependents } from "react-icons/go";
 import { BsPerson, BsSearch, BsSignStop } from "react-icons/bs";
 import Header from "rbrgs/app/components/header";
-import NavButton from "rbrgs/app/components/NavButton";
 import { useState } from "react";
 
 const CameraPage = () => {
