@@ -9,7 +9,7 @@ const CameraPage = () => {
     return (
       <div>
         <nav
-          className="relative flex h-screen w-36 flex-wrap  bg-[#707588] text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600">
+          className="relative flex h-screen w-36  bg-[#707588] text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600">
           <div className="flex h-screen flex-wrap items-center justify-between">
               <button className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-9 flex-auto">
                 <img
@@ -41,12 +41,27 @@ const CameraPage = () => {
               <NavButton route={""} />
             
           </div>
+
+          <div className="w-2/3">
+          <img
+            src="http://localhost:8080/stream?topic=/zed2/zed_node/rgb/image_rect_color"
+            alt="ZED2_Camera"
+            className="w-full h-full" />
+        </div>
+
+        <div className="w-1/3">
+          <img
+            src="http://localhost:8080/stream?topic=/zed2/zed_node/rgb/image_rect_color"
+            alt="ZED2_Camera"
+            className="w-full h-full" />
+        </div>
           
         </nav>
 
-        <nav
-          className="h-screen w-4 bg-[#ffffff]">
+        
 
+        <nav
+          className="h-screen w-4 bg-[#000000]">
         </nav>
 
       </div>
