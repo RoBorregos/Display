@@ -1,5 +1,5 @@
 'use client'
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { GiConsoleController } from "react-icons/gi";
 import { BsCameraFill } from "react-icons/bs";
 import { FaMapLocationDot } from "react-icons/fa6";
@@ -11,44 +11,47 @@ interface NBProps {
 }
 
 const NavBar: React.FC<NBProps> = ({ page }) => {
+  
   const router = useRouter();
- 
+  const pathName = usePathname();
+  console.log(pathName);
   const handleClick = (route: string) => {
     router.push(`/${route}`)
   }
+
   return (
     <div className="fixed">
       <nav
         className="fixed flex h-screen w-36 flex-wrap  bg-[#707588] text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600">
         <div className="flex h-screen flex-wrap items-center justify-between">
-          <button onClick={() => handleClick("")} className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-9 flex-auto">
+          <button onClick={() => handleClick("")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-9 flex-auto " + (pathName == "/" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
             <img
               src="/images/roborregos_logo.png"
               alt="RoBorregos_Logo"
               className="object-scale-down h-16" />
           </button>
 
-          <button onClick={() => handleClick("control")} className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-10 flex-auto">
+          <button onClick={() => handleClick("control")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-10 flex-auto " + (pathName == "/control" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
             <GiConsoleController className="text-6xl font-semibold text-neutral-100" href="#/control"
             />
           </button>
 
-          <button onClick={() => handleClick("camera")} className="bg-[#a4abc8] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto">
+          <button onClick={() => handleClick("camera")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/camera" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
             <BsCameraFill className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 
-          <button onClick={() => handleClick("navigation")} className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto">
+          <button onClick={() => handleClick("navigation")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/navigation" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
             <FaMapLocationDot className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 
-          <button onClick={() => handleClick("manipulation")} className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto">
+          <button onClick={() => handleClick("manipulation")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/manipulation" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
             <GiGrab className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 
-          <button onClick={() => handleClick("information")} className="bg-[#707588] rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto">
+          <button onClick={() => handleClick("information")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/information" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
             <HiMiniInformationCircle className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
