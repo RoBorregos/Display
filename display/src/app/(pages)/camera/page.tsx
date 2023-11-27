@@ -1,8 +1,4 @@
 "use client"
-import { FiMapPin } from "react-icons/fi";
-import { GiRobotGrab } from "react-icons/gi";
-import { GoPackageDependents } from "react-icons/go";
-import { BsPerson, BsSearch, BsSignStop } from "react-icons/bs";
 import Header from "rbrgs/app/components/header";
 import { useState } from "react";
 
@@ -40,8 +36,8 @@ const CameraPage = () => {
                 Recognition
               </div>
             </button>
-            <button className={"bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-4 px-8 rounded-r active:bg-gray-600 " + (topic == "/zed2/zed_node/rgb/image_rect_gray" ? "bg-gray-400" : "bg-gray-300")}
-              onClick={() => setTopic("/zed2/zed_node/rgb/image_rect_gray")}
+            <button className={"bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-4 px-8 rounded-r active:bg-gray-600 " + (topic == "/detections_image" ? "bg-gray-400" : "bg-gray-300")}
+              onClick={() => setTopic("/detections_image")}
             >
               <div>
                 Object
