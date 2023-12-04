@@ -5,7 +5,6 @@ import { GiRobotGrab } from "react-icons/gi";
 import { GoPackageDependents } from "react-icons/go";
 import { BsPerson, BsSearch, BsSignStop } from "react-icons/bs";
 import Header from "rbrgs/app/components/header";
-import NavBar from "rbrgs/app/components/NavButton";
 
 
 const ControlPage = () => {
