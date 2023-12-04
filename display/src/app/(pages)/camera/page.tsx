@@ -1,9 +1,11 @@
-import { GiConsoleController } from "react-icons/gi";
-import { BsCameraFill } from "react-icons/bs";
-import { FaMapLocationDot } from "react-icons/fa6";
-import { HiMiniInformationCircle } from "react-icons/hi2";
-import { GiGrab } from "react-icons/gi";
+"use client"
+import { FiMapPin } from "react-icons/fi";
+import { GiRobotGrab } from "react-icons/gi";
+import { GoPackageDependents } from "react-icons/go";
+import { BsPerson, BsSearch, BsSignStop } from "react-icons/bs";
+import Header from "rbrgs/app/components/header";
 import NavButton from "rbrgs/app/components/NavButton";
+import { useState } from "react";
 
 const CameraPage = () => {
     return (
@@ -65,7 +67,16 @@ const CameraPage = () => {
         </nav>
 
       </div>
-    )
+      <div className="flex flex-row justify-center items-center">
+        <div className="w-10/12 border border-10-white">
+          <img
+            src={"http://localhost:8080/stream?topic=" + topic}
+            alt={topic}
+            className="w-full h-full" />
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default CameraPage;
