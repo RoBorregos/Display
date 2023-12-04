@@ -14,7 +14,7 @@ const NavBar: React.FC<NBProps> = ({ page }) => {
   
   const router = useRouter();
   const pathName = usePathname();
-  console.log(pathName);
+  // console.log(pathName);
   const handleClick = (route: string) => {
     router.push(`/${route}`)
   }
@@ -22,7 +22,7 @@ const NavBar: React.FC<NBProps> = ({ page }) => {
   return (
     <div className="fixed">
       <nav
-        className="fixed flex h-screen w-36 flex-wrap  bg-[#707588] text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600">
+        className="fixed flex h-screen w-36 flex-wrap  bg-[#707588] text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-[#707588]">
         <div className="flex h-screen flex-wrap items-center justify-between">
           <button onClick={() => handleClick("")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-9 flex-auto " + (pathName == "/" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
             <img
