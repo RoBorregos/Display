@@ -12,7 +12,7 @@ const CameraPage = () => {
         <p className="mt-2 text-neutral-500 text-lg mb-6">
             View the map and current location of the robot
         </p>
-        <iframe className="w-full h-5/6" src="http://localhost:8001/rvizweb/www/index.html"></iframe>
+        <iframe className="w-full h-5/6" src="https://webviz.io/app/?rosbridge-websocket-url=ws://192.168.31.23:9090"></iframe>
     </div>
   )
 }
