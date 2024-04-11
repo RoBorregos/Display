@@ -18,12 +18,12 @@ const ControlPage = () => {
     ]
     
     return (
-        <div className="p-8 h-full">
+        <div className="p-8 h-screen">
             <Header title="Commands" />
             <p className="mt-2 text-neutral-500 text-lg mb-6">
                 Select the command to execute
             </p>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-3 gap-2 mr-12">
                 {actions.map((action, key) => (
                     <Action key={key} label={action.label} description={action.description} icon={action.icon || null} />
                 ))}
