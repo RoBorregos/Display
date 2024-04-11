@@ -10,7 +10,7 @@ const CameraPage = () => {
     <div className="p-8 h-screen">
         <Header title="xArm Manipulation" />
         <p className="mt-2 text-neutral-500 text-lg mb-6">
-            View the xArm's movement and current position
+            View the xArm&apos;s movement and current position
         </p>
         <iframe className="w-full h-5/6" src="https://webviz.io/app/?rosbridge-websocket-url=ws://192.168.31.23:9090&layout-url=https://raw.githubusercontent.com/RoBorregos/Display/main/display/public/layouts/layoutNav.json"></iframe>
     </div>
