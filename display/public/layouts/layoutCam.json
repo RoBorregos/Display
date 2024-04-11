@@ -1,0 +1,31 @@
+{
+  "layout": {
+    "first": {
+      "first": "ImageViewPanel!xvdlt9",
+      "second": "ImageViewPanel!1ec5za3",
+      "direction": "row"
+    },
+    "second": {
+      "first": "ImageViewPanel!1xe9bxk",
+      "second": "ImageViewPanel!3yac9ak",
+      "direction": "row"
+    },
+    "direction": "column"
+  },
+  "savedProps": {
+    "ImageViewPanel!1ec5za3": {},
+    "ImageViewPanel!1xe9bxk": {},
+    "ImageViewPanel!3yac9ak": {}
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "linkedGlobalVariables": [],
+  "playbackConfig": {
+    "speed": 1,
+    "messageOrder": "receiveTime",
+    "timeDisplayMethod": "TOD"
+  },
+  "version": 19,
+  "isFromUrl": false,
+  "skipSettingLocalStorage": false
+}
