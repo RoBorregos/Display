@@ -1,7 +1,11 @@
 {
   "layout": {
     "first": "3D Panel!86f11l",
-    "second": "3D Panel!2uxzexf",
+    "second": {
+      "first": "ImageViewPanel!3uvnt4e",
+      "second": "DiagnosticStatusPanel!16rox47",
+      "direction": "column"
+    },
     "direction": "row"
   },
   "savedProps": {
@@ -33,15 +37,15 @@
       ],
       "followTf": "BaseBrazo",
       "cameraState": {
-        "distance": 3.281222081101179,
+        "distance": 3.5849314002700083,
         "perspective": true,
-        "phi": 1.0369319057287392,
+        "phi": 1.0553368137041992,
         "targetOffset": [
-          0.21354868431015395,
-          0.479883123002277,
+          0.34151674693904754,
+          0.5961943616708655,
           0
         ],
-        "thetaOffset": -0.6072423398328681,
+        "thetaOffset": -0.7019498607242333,
         "fovy": 0.7853981633974483,
         "near": 0.01,
         "far": 5000
@@ -55,44 +59,19 @@
       "autoTextBackgroundColor": true,
       "followOrientation": false
     },
-    "3D Panel!2uxzexf": {
-      "checkedKeys": [
-        "name:Topics",
-        "t:/tf",
-        "t:/zed2/zed_node/point_cloud/cloud_registered",
-        "t:/map",
-        "ns:/tf:base_footprint"
-      ],
-      "expandedKeys": [
-        "name:Topics"
-      ],
-      "followTf": "map",
-      "cameraState": {
-        "distance": 2.467505786671294,
-        "perspective": false,
-        "phi": 0.9080975499005179,
-        "targetOffset": [
-          0,
-          0,
-          0
-        ],
-        "thetaOffset": 1.5821727019498621,
-        "fovy": 0.7853981633974483,
-        "near": 0.01,
-        "far": 5000,
-        "target": [
-          0,
-          0,
-          0
-        ]
-      },
-      "modifiedNamespaceTopics": [
-        "/tf"
-      ],
-      "pinTopics": false,
-      "settingsByKey": {},
-      "autoSyncCameraState": false,
-      "autoTextBackgroundColor": true
+    "ImageViewPanel!3uvnt4e": {
+      "cameraTopic": "/detections_image",
+      "enabledMarkerTopics": [],
+      "customMarkerTopicOptions": [],
+      "scale": 0.2,
+      "transformMarkers": true,
+      "synchronize": false,
+      "mode": "fit",
+      "zoomPercentage": 60,
+      "offset": [
+        71,
+        0
+      ]
     }
   },
   "globalVariables": {},
