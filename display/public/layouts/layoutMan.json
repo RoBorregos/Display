@@ -1,0 +1,109 @@
+{
+  "layout": {
+    "first": "3D Panel!86f11l",
+    "second": "3D Panel!2uxzexf",
+    "direction": "row"
+  },
+  "savedProps": {
+    "3D Panel!86f11l": {
+      "checkedKeys": [
+        "name:Topics",
+        "t:/tf",
+        "ns:/tf:Llanta1",
+        "ns:/tf:Llanta2",
+        "ns:/tf:link1",
+        "ns:/tf:link2",
+        "ns:/tf:link3",
+        "ns:/tf:link4",
+        "ns:/tf:link5",
+        "ns:/tf:link6",
+        "ns:/tf:Lidar",
+        "t:/zed2/zed_node/point_cloud/cloud_registered",
+        "ns:/tf:BaseBrazo",
+        "ns:/tf:Loca1",
+        "ns:/tf:Loca2",
+        "ns:/tf:Dedo1",
+        "ns:/tf:Dedo2",
+        "ns:/tf:zed2_base_link",
+        "t:/map",
+        "ns:/tf:base_footprint"
+      ],
+      "expandedKeys": [
+        "name:Topics"
+      ],
+      "followTf": "BaseBrazo",
+      "cameraState": {
+        "distance": 3.281222081101179,
+        "perspective": true,
+        "phi": 1.0369319057287392,
+        "targetOffset": [
+          0.21354868431015395,
+          0.479883123002277,
+          0
+        ],
+        "thetaOffset": -0.6072423398328681,
+        "fovy": 0.7853981633974483,
+        "near": 0.01,
+        "far": 5000
+      },
+      "modifiedNamespaceTopics": [
+        "/tf"
+      ],
+      "pinTopics": false,
+      "settingsByKey": {},
+      "autoSyncCameraState": false,
+      "autoTextBackgroundColor": true,
+      "followOrientation": false
+    },
+    "3D Panel!2uxzexf": {
+      "checkedKeys": [
+        "name:Topics",
+        "t:/tf",
+        "t:/zed2/zed_node/point_cloud/cloud_registered",
+        "t:/map",
+        "ns:/tf:base_footprint"
+      ],
+      "expandedKeys": [
+        "name:Topics"
+      ],
+      "followTf": "map",
+      "cameraState": {
+        "distance": 2.467505786671294,
+        "perspective": false,
+        "phi": 0.9080975499005179,
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "thetaOffset": 1.5821727019498621,
+        "fovy": 0.7853981633974483,
+        "near": 0.01,
+        "far": 5000,
+        "target": [
+          0,
+          0,
+          0
+        ]
+      },
+      "modifiedNamespaceTopics": [
+        "/tf"
+      ],
+      "pinTopics": false,
+      "settingsByKey": {},
+      "autoSyncCameraState": false,
+      "autoTextBackgroundColor": true
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "linkedGlobalVariables": [],
+  "playbackConfig": {
+    "speed": 1,
+    "messageOrder": "receiveTime",
+    "timeDisplayMethod": "TOD"
+  },
+  "version": 19,
+  "isFromUrl": false,
+  "skipSettingLocalStorage": false
+}
