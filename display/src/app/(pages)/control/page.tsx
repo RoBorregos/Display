@@ -23,7 +23,7 @@ const ControlPage = () => {
             <p className="mt-2 text-neutral-500 text-lg mb-6">
                 Select the command to execute
             </p>
-            <div className="grid grid-cols-3 gap-2 mr-12">
+            <div className="grid grid-cols-3 gap-2 mr-16">
                 {actions.map((action, key) => (
                     <Action key={key} label={action.label} description={action.description} icon={action.icon || null} />
                 ))}

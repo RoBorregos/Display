@@ -5,6 +5,7 @@ import { BsCameraFill } from "react-icons/bs";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { HiMiniInformationCircle } from "react-icons/hi2";
 import { GiGrab } from "react-icons/gi";
+import { IoMdSettings } from "react-icons/io";
 
 interface NBProps {
   page?: string;
@@ -53,6 +54,11 @@ const NavBar: React.FC<NBProps> = ({ page }) => {
 
           <button onClick={() => handleClick("information")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/information" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
             <HiMiniInformationCircle className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+            />
+          </button>
+
+          <button onClick={() => handleClick("settings")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/settings" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
+            <IoMdSettings className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 
