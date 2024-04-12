@@ -11,11 +11,11 @@ export const getInfo = async (id:string) => {
                 }
             break;
 
-            case "grab":
+            case "pick":
                 return {
-                    title: "Grab",
-                    command: "grab ",
-                    items: ["Pen", "Pencil", "Paper"],
+                    title: "Pick",
+                    command: "pick",
+                    items: ["Cookies", "Zucaritas", "Paper"],
                     description: "Select the object for the robot to grab"
                 }
             break;

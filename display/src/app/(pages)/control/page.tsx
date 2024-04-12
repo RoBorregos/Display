@@ -10,7 +10,7 @@ import Header from "rbrgs/app/components/header";
 const ControlPage = () => {
     const actions = [
         { label: "Go ", description: "Make the robot move to a set location", icon: FiMapPin },
-        { label: "Grab ", description: "Make the robot grab an object", icon: GiRobotGrab },
+        { label: "Pick ", description: "Make the robot grab an object", icon: GiRobotGrab },
         { label: "Put ", description: "Give an object to a user", icon: GoPackageDependents },
         { label: "Find ", description: "Find someone?", icon: BsSearch },
         { label: "Introduce ", description: "Introduce to someone", icon: BsPerson },
