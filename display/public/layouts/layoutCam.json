@@ -1,21 +1,75 @@
 {
   "layout": {
     "first": {
-      "first": "ImageViewPanel!xvdlt9",
-      "second": "ImageViewPanel!1ec5za3",
-      "direction": "row"
+      "first": "ImageViewPanel!1ec5za3",
+      "second": "ImageViewPanel!xvdlt9",
+      "direction": "row",
+      "splitPercentage": 66.59722222222221
     },
     "second": {
       "first": "ImageViewPanel!1xe9bxk",
-      "second": "ImageViewPanel!3yac9ak",
+      "second": "ImageViewPanel!h4wvxk",
       "direction": "row"
     },
     "direction": "column"
   },
   "savedProps": {
-    "ImageViewPanel!1ec5za3": {},
-    "ImageViewPanel!1xe9bxk": {},
-    "ImageViewPanel!3yac9ak": {}
+    "ImageViewPanel!1ec5za3": {
+      "cameraTopic": "/zed2/zed_node/stereo/image_rect_color/compressed",
+      "enabledMarkerTopics": [],
+      "customMarkerTopicOptions": [],
+      "scale": 0.2,
+      "transformMarkers": false,
+      "synchronize": false,
+      "mode": "fit",
+      "zoomPercentage": 49.84375,
+      "offset": [
+        0,
+        27.421875
+      ]
+    },
+    "ImageViewPanel!xvdlt9": {
+      "cameraTopic": "/zed2/zed_node/confidence/confidence_map",
+      "enabledMarkerTopics": [],
+      "customMarkerTopicOptions": [],
+      "scale": 0.2,
+      "transformMarkers": true,
+      "synchronize": false,
+      "mode": "fit",
+      "zoomPercentage": 49.895833333333336,
+      "offset": [
+        -5.684341886080802e-14,
+        27.28125
+      ]
+    },
+    "ImageViewPanel!1xe9bxk": {
+      "cameraTopic": "/detections_image",
+      "enabledMarkerTopics": [],
+      "customMarkerTopicOptions": [],
+      "scale": 0.2,
+      "transformMarkers": true,
+      "synchronize": false,
+      "mode": "fit",
+      "zoomPercentage": 60,
+      "offset": [
+        71,
+        0
+      ]
+    },
+    "ImageViewPanel!h4wvxk": {
+      "cameraTopic": "/zed2/zed_node/rgb/image_rect_gray",
+      "enabledMarkerTopics": [],
+      "customMarkerTopicOptions": [],
+      "scale": 0.2,
+      "transformMarkers": false,
+      "synchronize": false,
+      "mode": "fit",
+      "zoomPercentage": 60,
+      "offset": [
+        71,
+        0
+      ]
+    }
   },
   "globalVariables": {},
   "userNodes": {},
