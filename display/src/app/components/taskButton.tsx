@@ -43,25 +43,34 @@ const SelectItem: React.FC<SelectItemProps> = ({ label, command }) => {
     // Publish the command to the ROS queue
     function publish(actionDisplay: string, complementDisplay: string) {
         
-        // Connect if not connected
-        if (status !== 'Connected!') {
-            connect()
-        }
+        // Connect to ROS websocket
+        connect()
 
         // Define command topic
         const cmd = new ROSLIB.Topic({
             ros: ros,
-            name: "/display_command",
+            name: "/task_manager/commands",
             messageType: "frida_hri_interfaces/CommandList" 
         })
-        
+
         // Define command message
-        const data = new ROSLIB.Message({
-            commands : {
+        const singleCommand = new ROSLIB.Message({
+            command : {
                 action : actionDisplay.toLowerCase(),
                 characteristic : "",
                 complement : complementDisplay.toLowerCase(),
             }
+        })
+        
+        // Define command message array
+        const data = new ROSLIB.Message({
+            commands : [
+                {
+                action : actionDisplay.toLowerCase(),
+                characteristic : "",
+                complement : complementDisplay.toLowerCase()
+                }
+            ]
         })
         
         // Publish the command
