@@ -2,7 +2,7 @@
 
 import BackButton from "rbrgs/app/components/backButton";
 import Header from "rbrgs/app/components/header";
-import SelectItem from "rbrgs/app/components/selectItem";
+import TaskButton from "rbrgs/app/components/taskButton";
 import { getInfo } from "rbrgs/app/utils/actions/getCommandInfo";
 import { useState } from "react";
 import ROSLIB from "roslib";
@@ -36,7 +36,7 @@ const MoveTo = async (params: any) => {
                 </p>
                 <div className="px-10 flex flex-col self-center">
                     {items.map((item, key) => (
-                        <SelectItem key={key} label={item} command={command} />
+                        <TaskButton key={key} label={item} command={command} />
                     ))}
                 </div>
             </div>
