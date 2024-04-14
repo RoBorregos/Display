@@ -4,8 +4,6 @@ import { useState } from "react";
 
 const SettingsPage = () => {
 
-  const [topic, setTopic] = useState<string>("/zed2/zed_node/rgb/image_rect_color");
-
   return (
     <div className="p-8 h-screen">
         <Header title="Settings" />
