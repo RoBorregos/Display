@@ -1,11 +1,13 @@
 "use client"
 import Header from "rbrgs/app/components/header";
+import MenuButton from "rbrgs/app/components/MenuButton";
 import { useState } from "react";
 
 const CameraPage = () => {
 
   const [taskLayout, setTaskLayout] = useState<string>("layoutCam");
 
+  /*
   return (
     <div className="h-screen">
       <div className="p-8 h-1/6">
@@ -48,7 +50,27 @@ const CameraPage = () => {
 
 
   )
-  
+  */
+  return (
+    <div className="h-screen">
+      <div className="p-8 h-1/6">
+        <div className="flex flex-row ml-96 absolute">
+
+          <MenuButton/>
+
+        </div>
+
+        <Header title="Visualize" />
+        <p className="mt-2 text-neutral-500 text-lg mb-6">
+          Select what you want to visualize
+        </p>
+      </div>
+      <div className="w-full h-5/6">
+        <iframe className="w-full h-full" src={"https://webviz.io/app/?rosbridge-websocket-url=ws://192.168.31.23:9090&layout-url=https://raw.githubusercontent.com/RoBorregos/Display/main/display/public/layouts/" + taskLayout + ".json"}></iframe>
+      </div>
+    </div>
+
+  )
 }
 
 export default CameraPage;
