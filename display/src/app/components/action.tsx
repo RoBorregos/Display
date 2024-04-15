@@ -15,6 +15,7 @@ const Action: React.FC<ActionProps> = ({ label, description, icon: Icon }) => {
         const id = `/control/commands?id=${label.replace(" ", "").toLowerCase()}`;
         // const info = await getInfo(id);
         router.push(id)
+        console.log(id)
     }
 
     return (

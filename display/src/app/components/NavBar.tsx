@@ -1,10 +1,9 @@
 'use client'
 import { useRouter, usePathname } from "next/navigation";
 import { GiConsoleController } from "react-icons/gi";
+import { FaTachometerAlt } from "react-icons/fa";
 import { FaDatabase, FaEye } from "react-icons/fa6";
 import { IoMdSettings } from "react-icons/io";
-import { PiCircuitryFill } from "react-icons/pi";
-
 
 interface NBProps {
   page?: string;
@@ -47,7 +46,7 @@ const NavBar: React.FC<NBProps> = ({ page }) => {
           </button>
 
           <button onClick={() => handleClick("diagnostics")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto h-24" + (pathName == "/diagnostics" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
-            <PiCircuitryFill className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+            <FaTachometerAlt className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 

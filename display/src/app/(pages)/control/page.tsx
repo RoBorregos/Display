@@ -1,34 +1,45 @@
 'use client'
-import Action from "rbrgs/app/components/action";
-import { FiMapPin } from "react-icons/fi";
-import { GiRobotGrab } from "react-icons/gi";
-import { GoPackageDependents } from "react-icons/go";
-import { BsPerson, BsSearch, BsSignStop } from "react-icons/bs";
+import { useRouter, usePathname } from "next/navigation";
 import Header from "rbrgs/app/components/header";
+import { FaHome, FaArrowsAlt } from "react-icons/fa";
 
 
-const ControlPage = () => {
-    const actions = [
-        { label: "Go ", description: "Make the robot move to a set location", icon: FiMapPin },
-        { label: "Pick ", description: "Make the robot grab an object", icon: GiRobotGrab },
-        { label: "Put ", description: "Give an object to a user", icon: GoPackageDependents },
-        { label: "Find ", description: "Find someone?", icon: BsSearch },
-        { label: "Introduce ", description: "Introduce to someone", icon: BsPerson },
-        { label: "Stop ", description: "Make the robot stop", icon: BsSignStop }
-    ]
+
+const ControlPage = () => {   
     
+    const router = useRouter();
+    const pathName = usePathname(); 
+
+    const handleClick = (route: string) => {
+        router.push(`/control/${route}`)
+      }
+
     return (
         <div className="p-8 h-screen">
-            <Header title="Commands" />
+            <Header title="Control" />
             <p className="mt-2 text-neutral-500 text-lg mb-6">
-                Select the command to execute
+                Choose type of task to execute
             </p>
-            <div className="grid grid-cols-3 gap-2 mr-16">
-                {actions.map((action, key) => (
-                    <Action key={key} label={action.label} description={action.description} icon={action.icon || null} />
-                ))}
+            <div className="flex">
+                <button onClick={() => handleClick("tasks")} className={"h-80 rounded bg-[#707588] hover:bg-[#a4abc8] active:bg-[#bec4dd] mx-5 mt-10 flex-auto"}>
+                    <FaHome className="" />
+                    <h1>
+                        Specific @Home Tasks
+                    </h1>
+                    <p>
+                        Tell FRIDA a particular task to execute
+                    </p>
+                </button>
+                <button onClick={() => handleClick("commands")} className={"h-80 rounded bg-[#707588] hover:bg-[#a4abc8] active:bg-[#bec4dd] mx-5 mt-10 flex-auto"}>
+                    <FaArrowsAlt />
+                    <h1>
+                        General Purpose Commands
+                    </h1>
+                    <p>
+                        Tell FRIDA what specific commands to follow
+                    </p>
+                </button>
             </div>
-
         </div>
 
     )
