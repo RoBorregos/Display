@@ -31,7 +31,7 @@ const VisualPage = () => {
       <div className="p-8 h-1/6">
         <div className="flex flex-row ml-96 absolute">
 
-          <div className="fixed top-10 w-50">
+          <div className="fixed top-9 w-50">
             <Listbox value={selected} onChange={setSelected}>
               <div className="relative mt-1">
                 <Listbox.Button className="relative flex w-full cursor-default rounded-lg border-2 border-[#707588] py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-[#707588] focus-visible:ring-2 focus-visible:ring-[#707588] focus-visible:ring-offset-2 focus-visible:ring-offset-[#bec4dd] sm:text-sm text-white font-bold">
