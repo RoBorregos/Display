@@ -8,7 +8,7 @@ export default function Home() {
   const router = useRouter()
 
   const handleClick = () => {
-    router.push('/control');
+    router.push('/visual');
   }
 
   return (

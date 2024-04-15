@@ -32,7 +32,7 @@ const NavBar: React.FC<NBProps> = ({ page }) => {
               className="object-scale-down h-16" />
           </button>
 
-          <button onClick={() => handleClick("visual")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/camera" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
+          <button onClick={() => handleClick("visual")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/visual" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
             <FaEye className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
