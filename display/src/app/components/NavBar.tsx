@@ -1,11 +1,10 @@
 'use client'
 import { useRouter, usePathname } from "next/navigation";
 import { GiConsoleController } from "react-icons/gi";
-import { BsCameraFill } from "react-icons/bs";
-import { FaMapLocationDot } from "react-icons/fa6";
-import { HiMiniInformationCircle } from "react-icons/hi2";
-import { GiGrab } from "react-icons/gi";
+import { FaDatabase, FaEye } from "react-icons/fa6";
 import { IoMdSettings } from "react-icons/io";
+import { PiCircuitryFill } from "react-icons/pi";
+
 
 interface NBProps {
   page?: string;
@@ -25,40 +24,35 @@ const NavBar: React.FC<NBProps> = ({ page }) => {
       <nav
         className="fixed flex h-screen w-36 flex-wrap  bg-[#707588] text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-[#707588]">
         <div className="flex h-screen flex-wrap items-center justify-between">
-          <button onClick={() => handleClick("")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-9 flex-auto " + (pathName == "/" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
+          <button onClick={() => handleClick("")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-9 flex-auto h-24" + (pathName == "/" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
             <img
               src="/images/roborregos_logo.png"
               alt="RoBorregos_Logo"
               className="object-scale-down h-16" />
           </button>
 
-          <button onClick={() => handleClick("control")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-10 flex-auto " + (pathName == "/control" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
-            <GiConsoleController className="text-6xl font-semibold text-neutral-100" href="#/control"
+          <button onClick={() => handleClick("visual")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto h-24" + (pathName == "/visual" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
+            <FaEye className="text-5xl ml-1 font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 
-          <button onClick={() => handleClick("camera")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/camera" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
-            <BsCameraFill className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+          <button onClick={() => handleClick("control")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-4 px-8 flex-auto h-24" + (pathName == "/control" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
+            <GiConsoleController className="text-6xl ml-2 font-semibold text-neutral-100" href="#/control"
             />
           </button>
 
-          <button onClick={() => handleClick("navigation")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/navigation" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
-            <FaMapLocationDot className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+          <button onClick={() => handleClick("data")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto h-24" + (pathName == "/data" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
+            <FaDatabase className="size-10 ml-1 font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 
-          <button onClick={() => handleClick("manipulation")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/manipulation" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
-            <GiGrab className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+          <button onClick={() => handleClick("diagnostics")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto h-24" + (pathName == "/diagnostics" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
+            <PiCircuitryFill className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 
-          <button onClick={() => handleClick("information")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/information" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
-            <HiMiniInformationCircle className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
-            />
-          </button>
-
-          <button onClick={() => handleClick("settings")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/settings" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
-            <IoMdSettings className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+          <button onClick={() => handleClick("settings")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto h-24" + (pathName == "/settings" ? " bg-[#a4abc8]" : " bg-[#707588]")}>
+            <IoMdSettings className="text-5xl object-center font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 

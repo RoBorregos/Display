@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "clean": "^4.0.2",
     "next": "latest",
     "react": "latest",
