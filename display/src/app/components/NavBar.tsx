@@ -2,7 +2,7 @@
 import { useRouter, usePathname } from "next/navigation";
 import { GiConsoleController } from "react-icons/gi";
 import { BsCameraFill } from "react-icons/bs";
-import { FaMapLocationDot } from "react-icons/fa6";
+import { FaMapLocationDot, FaEye } from "react-icons/fa6";
 import { HiMiniInformationCircle } from "react-icons/hi2";
 import { GiGrab } from "react-icons/gi";
 import { IoMdSettings } from "react-icons/io";
@@ -37,18 +37,8 @@ const NavBar: React.FC<NBProps> = ({ page }) => {
             />
           </button>
 
-          <button onClick={() => handleClick("camera")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/camera" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
-            <BsCameraFill className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
-            />
-          </button>
-
-          <button onClick={() => handleClick("navigation")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/navigation" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
-            <FaMapLocationDot className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
-            />
-          </button>
-
-          <button onClick={() => handleClick("manipulation")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/manipulation" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
-            <GiGrab className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
+          <button onClick={() => handleClick("visual")} className={"rounded hover:bg-[#a4abc8] active:bg-[#bec4dd] py-5 px-11 flex-auto " + (pathName == "/camera" ? "bg-[#a4abc8]" : "bg-[#707588]")}>
+            <FaEye className="text-5xl font-semibold text-neutral-100 dark:text-neutral-200" href="#"
             />
           </button>
 
