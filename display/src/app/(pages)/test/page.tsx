@@ -1,6 +1,6 @@
 "use client"
 import Header from "rbrgs/app/components/header";
-import MenuButton from "rbrgs/app/components/LayoutsButton";
+// import MenuButton from "rbrgs/app/components/LayoutsButton";
 import { useState } from "react";
 
 
@@ -12,10 +12,10 @@ const CameraPage = () => {
     <div className="p-8 h-screen">
         <Header title="Navigation" />
         <p className="mt-2 text-neutral-500 text-lg mb-6">
-            Watch where FRIDA is and where they're going
+            Watch where FRIDA is and where they&apos;re going
         </p>
         <div>
-          <MenuButton/>
+          {/* <MenuButton/> */}
         </div> 
         
 
