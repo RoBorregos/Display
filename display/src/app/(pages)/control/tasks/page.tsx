@@ -1,32 +1,33 @@
-'use client';
-
-import BackButton from "rbrgs/app/components/backButton";
+'use client'
+import Action from "rbrgs/app/components/action";
+import { FiMapPin } from "react-icons/fi";
+import { GiRobotGrab } from "react-icons/gi";
+import { GoPackageDependents } from "react-icons/go";
+import { BsPerson, BsSearch, BsSignStop } from "react-icons/bs";
 import Header from "rbrgs/app/components/header";
-import TaskButton from "rbrgs/app/components/taskButton";
-import { getInfo } from "rbrgs/app/utils/actions/getCommandInfo";
-import { useState } from "react";
-import ROSLIB from "roslib";
-
-const MoveTo = async (params: any) => {
-    const [status, setStatus] = useState("Not connected");
+import BackButton from "rbrgs/app/components/backButton";
 
 
-    const info = await getInfo(params.searchParams.id);
-    const title = info?.title || "";
-    const command = info?.command || "";
-    const items = info?.items || [];
-    const description = info?.description || "";    
-
+const TasksPage = () => {
+    const actions = [
+        { label: "Go ", description: "Make the robot move to a set location", icon: FiMapPin },
+        { label: "Pick ", description: "Make the robot grab an object", icon: GiRobotGrab },
+        { label: "Put ", description: "Give an object to a user", icon: GoPackageDependents },
+        { label: "Find ", description: "Find someone?", icon: BsSearch },
+        { label: "Introduce ", description: "Introduce to someone", icon: BsPerson },
+        { label: "Stop ", description: "Make the robot stop", icon: BsSignStop }
+    ]
+    
     return (
         <div className="p-20 flex flex-col justify-between h-screen">
             <div>
-                <Header title={title} />
-                <p className="text-neutral-300 font-mono my-4">
-                    {description}
+                <Header title="Commands" />
+                <p className="mt-2 text-neutral-500 text-lg mb-6">
+                    Select the command to execute
                 </p>
-                <div className="px-10 flex flex-col self-center">
-                    {items.map((item, key) => (
-                        <TaskButton key={key} label={item} command={command} />
+                <div className="grid grid-cols-3 gap-2 mr-16">
+                    {actions.map((action, key) => (
+                        <Action key={key} label={action.label} description={action.description} icon={action.icon || null} />
                     ))}
                 </div>
             </div>
@@ -34,7 +35,8 @@ const MoveTo = async (params: any) => {
                 <BackButton />
             </div>
         </div>
+
     )
 }
 
-export default MoveTo;
+export default TasksPage;
