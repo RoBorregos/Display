@@ -12,7 +12,7 @@ const Action: React.FC<ActionProps> = ({ label, description, icon: Icon }) => {
     const router = useRouter();
 
     const handleClick = async() => {
-        const id = `/control/commands?id=${label.replace(" ", "").toLowerCase()}`;
+        const id = `/control/commands/commands?id=${label.replace(" ", "").toLowerCase()}`;
         // const info = await getInfo(id);
         router.push(id)
         console.log(id)
