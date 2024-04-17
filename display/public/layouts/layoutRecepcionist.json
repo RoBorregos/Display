@@ -1,0 +1,34 @@
+{
+  "layout": {
+    "first": "3D Panel!ci7xii",
+    "second": "ImageViewPanel!1419n06",
+    "direction": "row"
+  },
+  "savedProps": {
+    "ImageViewPanel!1419n06": {
+      "cameraTopic": "/shelf_detection_image",
+      "enabledMarkerTopics": [],
+      "customMarkerTopicOptions": [],
+      "scale": 0.2,
+      "transformMarkers": true,
+      "synchronize": false,
+      "mode": "fit",
+      "zoomPercentage": 87.22222222222223,
+      "offset": [
+        196.33333333333331,
+        0
+      ]
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "linkedGlobalVariables": [],
+  "playbackConfig": {
+    "speed": 1,
+    "messageOrder": "receiveTime",
+    "timeDisplayMethod": "TOD"
+  },
+  "version": 19,
+  "isFromUrl": false,
+  "skipSettingLocalStorage": false
+}
