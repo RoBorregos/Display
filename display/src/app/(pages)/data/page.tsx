@@ -9,7 +9,7 @@ const DataPage = () => {
     <div className="p-8 h-screen">
       <Header title="DataBase" />
       <p className="mt-2 text-neutral-500 text-lg mb-6">
-          See what information has been stored
+          See what data has been stored
       </p>
       <div>
         
