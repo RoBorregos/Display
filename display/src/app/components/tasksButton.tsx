@@ -88,7 +88,7 @@ const TasksButton: React.FC<TasksProps> = ({ task, description, icon: Icon }) =>
         <button onClick={handleClick}>
             <div className="bg-neutral-800 hover:bg-neutral-700 my-4 mx-8 p-2 rounded-xl ring-1 ring-offset-0 ring-neutral-500 flex flex-col justify-center h-full w-full">
                 <div className="bg-neutral-900 p-2 w-fit rounded-lg self-center mb-3">
-                    <Icon className="text-emerald-400 text-xl" />
+                    <Icon className="text-emerald-400 text-4xl" />
                 </div>
                 <h1 className="font-mono text-lg text-gray-100">
                     {task}
