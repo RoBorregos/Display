@@ -8,13 +8,14 @@ interface ActionProps {
     icon: any;
 }
 
-const Action: React.FC<ActionProps> = ({ label, description, icon: Icon }) => {
+const ActionButton: React.FC<ActionProps> = ({ label, description, icon: Icon }) => {
     const router = useRouter();
 
     const handleClick = async() => {
-        const id = `/control/commands?id=${label.replace(" ", "").toLowerCase()}`;
+        const id = `/control/commands/command?id=${label.replace(" ", "").toLowerCase()}`;
         // const info = await getInfo(id);
         router.push(id)
+        console.log(id)
     }
 
     return (
@@ -34,4 +35,4 @@ const Action: React.FC<ActionProps> = ({ label, description, icon: Icon }) => {
     )
 }
 
-export default Action;
+export default ActionButton;

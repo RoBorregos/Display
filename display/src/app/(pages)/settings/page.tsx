@@ -1,14 +1,22 @@
+"use client"
 import Header from "rbrgs/app/components/header";
-import Status from "rbrgs/app/components/info/status";
+import WIP from "rbrgs/app/components/wip";
 
-const Info = () => {
+const SettingsPage = () => {
 
-    return (
-        <div className="p-20">
-            <Header title="Info" />
-            <Status />
-        </div>
-    );
+  return (
+    <div className="p-8 h-screen">
+      <div className="h-1/6">
+        <Header title="Settings" />
+        <p className="mt-2 text-neutral-500 text-lg mb-6">
+          Change the settings of the display
+        </p>
+      </div>
+      <div>
+        <WIP />
+      </div>
+    </div>
+  )
 }
 
-export default Info;
+export default SettingsPage;

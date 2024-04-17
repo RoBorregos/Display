@@ -2,7 +2,7 @@
 
 import BackButton from "rbrgs/app/components/backButton";
 import Header from "rbrgs/app/components/header";
-import TaskButton from "rbrgs/app/components/taskButton";
+import TaskButton from "rbrgs/app/components/commandButton";
 import { getInfo } from "rbrgs/app/utils/actions/getCommandInfo";
 import { useState } from "react";
 import ROSLIB from "roslib";
@@ -15,17 +15,7 @@ const MoveTo = async (params: any) => {
     const title = info?.title || "";
     const command = info?.command || "";
     const items = info?.items || [];
-    const description = info?.description || "";
-
-    
-
-    // const handleClick = (e: any) => {
-    //     const msg = command + " " + e;
-    //     setMessage(msg);
-    //     console.log(message)
-    // }
-
-    
+    const description = info?.description || "";    
 
     return (
         <div className="p-20 flex flex-col justify-between h-screen">

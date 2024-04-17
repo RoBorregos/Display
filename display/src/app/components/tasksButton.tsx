@@ -1,17 +1,16 @@
-// Nodejs and ROS libraries
-'use client';
+'use client'
 import { useState } from "react";
 import ROSLIB from "roslib";
 
 // Button props
-interface SelectItemProps {
-    label: string;
-    command: string;
+interface TasksProps {
+    task: string;
+    description: string;
+    icon: any;
 }
 
-// Button component
-const SelectItem: React.FC<SelectItemProps> = ({ label, command }) => {
-    
+const TasksButton: React.FC<TasksProps> = ({ task, description, icon: Icon }) => {
+
     const [status, setStatus] = useState("Not connected"); // Connection to ROS state hook
     const ros = new ROSLIB.Ros({ encoding: 'ascii' } as any) // ROS component
 
@@ -61,7 +60,7 @@ const SelectItem: React.FC<SelectItemProps> = ({ label, command }) => {
                 complement : complementDisplay.toLowerCase(),
             }
         })
-        
+
         // Define command message array
         const data = new ROSLIB.Message({
             commands : [
@@ -80,19 +79,26 @@ const SelectItem: React.FC<SelectItemProps> = ({ label, command }) => {
 
     // Publish and log the command
     const handleClick = () => {
-        console.log(command + " " + label)
-        publish(command, label)
+        console.log(task + " " + task)
+        publish(task, task)
     }
 
     // Button
     return (
-        <div>
-            <button onClick={handleClick} className="text-gray-100 bg-neutral-800 hover:bg-neutral-700 my-4 mx-8 mr-10 p-4 rounded-xl ring-1 ring-offset-0 ring-neutral-500 flex flex-col justify-center w-full">
-                {label}
-            </button>
-        </div>
+        <button onClick={handleClick}>
+            <div className="bg-neutral-800 hover:bg-neutral-700 my-4 mx-8 p-2 rounded-xl ring-1 ring-offset-0 ring-neutral-500 flex flex-col justify-center h-full w-full">
+                <div className="bg-neutral-900 p-2 w-fit rounded-lg self-center mb-3">
+                    <Icon className="text-emerald-400 text-4xl" />
+                </div>
+                <h1 className="font-mono text-lg text-gray-100">
+                    {task}
+                </h1>
+                <p className="text-neutral-400 text-sm">
+                    {description}
+                </p>
+            </div>
+        </button>
     )
 }
 
-// Export button
-export default SelectItem;
+export default TasksButton;
