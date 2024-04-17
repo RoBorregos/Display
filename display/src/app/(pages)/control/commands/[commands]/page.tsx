@@ -2,7 +2,7 @@
 
 import BackButton from "rbrgs/app/components/backButton";
 import Header from "rbrgs/app/components/header";
-import TaskButton from "rbrgs/app/components/taskButton";
+import TaskButton from "rbrgs/app/components/commandButton";
 import { getInfo } from "rbrgs/app/utils/actions/getCommandInfo";
 import { useState } from "react";
 import ROSLIB from "roslib";

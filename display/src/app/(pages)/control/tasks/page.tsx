@@ -1,5 +1,5 @@
 'use client'
-import Action from "rbrgs/app/components/action";
+import Action from "rbrgs/app/components/tasksButton";
 import { FaCoffee } from "react-icons/fa";
 import { MdSensorDoor } from "react-icons/md";
 import { BsFillHandbagFill } from "react-icons/bs";
@@ -8,9 +8,9 @@ import BackButton from "rbrgs/app/components/backButton";
 
 const TasksPage = () => {
     const actions = [
-        { label: "Breakfast ", description: "Make the robot move to a set location", icon: FaCoffee },
-        { label: "Luggage ", description: "Make the robot grab an object", icon: BsFillHandbagFill },
-        { label: "Recepcionist ", description: "Give an object to a user", icon: MdSensorDoor },
+        { task: "Breakfast ", description: "Ask FRIDA to prepare some breakfast", icon: FaCoffee },
+        { task: "Luggage ", description: "Ask FRIDA to carry your luggage", icon: BsFillHandbagFill },
+        { task: "Recepcionist ", description: "Ask FRIDA to receive new guests", icon: MdSensorDoor },
     ]
     
     return (
@@ -22,7 +22,7 @@ const TasksPage = () => {
                 </p>
                 <div className="grid grid-cols-3 gap-2 mr-16">
                     {actions.map((action, key) => (
-                        <Action key={key} label={action.label} description={action.description} icon={action.icon || null} />
+                        <Action key={key} task={action.task} description={action.description} icon={action.icon || null} />
                     ))}
                 </div>
             </div>

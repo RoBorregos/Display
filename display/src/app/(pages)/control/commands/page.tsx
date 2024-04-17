@@ -1,5 +1,5 @@
 'use client'
-import Action from "rbrgs/app/components/action";
+import Action from "rbrgs/app/components/actionButton";
 import { FiMapPin } from "react-icons/fi";
 import { GiRobotGrab } from "react-icons/gi";
 import { GoPackageDependents } from "react-icons/go";
