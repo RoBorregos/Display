@@ -13,7 +13,7 @@ const ControlPage = () => {
     const handleClick = (route: string) => {
         router.push(`/control/${route}`)
       }
-
+    
     return (
         <div className="p-8 h-screen">
             <Header title="Control" />
