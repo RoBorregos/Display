@@ -98,7 +98,7 @@ const VisualPage = () => {
         </p>
       </div>
       <div className="w-full h-5/6">
-        <iframe className="w-full h-full" src={"https://webviz.io/app/?rosbridge-websocket-url=ws://192.168.31.23:9090&layout-url=https://raw.githubusercontent.com/RoBorregos/Display/main/display/public/layouts/" + selected.layout + ".json"}></iframe>
+        <iframe className="w-full h-full" src={"https://webviz.io/app/?rosbridge-websocket-url=ws://192.168.31.23:9090&layout-url=https://raw.githubusercontent.com/Francisco-SP3/Display/main/display/public/layouts/" + selected.layout + ".json"}></iframe>
       </div>
     </div>
 
