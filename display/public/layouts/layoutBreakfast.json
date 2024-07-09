@@ -1,23 +1,158 @@
 {
   "layout": {
-    "first": "3D Panel!ci7xii",
-    "second": "ImageViewPanel!1419n06",
-    "direction": "row"
+    "first": {
+      "first": {
+        "first": "Note!3kd1kpk",
+        "second": "ImageViewPanel!3blfjnb",
+        "direction": "column",
+        "splitPercentage": 10.000000000000007
+      },
+      "second": {
+        "first": "Note!3aa2rla",
+        "second": "ImageViewPanel!ml9c3a",
+        "direction": "column",
+        "splitPercentage": 10.000000000000007
+      },
+      "direction": "row"
+    },
+    "second": {
+      "first": "Note!2sf9lq5",
+      "second": "3D Panel!1rvg79l",
+      "direction": "column",
+      "splitPercentage": 10
+    },
+    "direction": "row",
+    "splitPercentage": 67.12962962962963
   },
   "savedProps": {
-    "ImageViewPanel!1419n06": {
-      "cameraTopic": "/shelf_detection_image",
+    "Note!3kd1kpk": {
+      "noteText": "Normal vision"
+    },
+    "ImageViewPanel!3blfjnb": {
+      "cameraTopic": "/zed2/zed_node/left/image_rect_color/compressed",
+      "enabledMarkerTopics": [],
+      "customMarkerTopicOptions": [],
+      "scale": 0.2,
+      "transformMarkers": false,
+      "synchronize": false,
+      "mode": "fit",
+      "zoomPercentage": 47.604166666666664,
+      "offset": [
+        -0.5,
+        104.46875
+      ]
+    },
+    "Note!3aa2rla": {
+      "noteText": "Object detection"
+    },
+    "ImageViewPanel!ml9c3a": {
+      "cameraTopic": "/detections_image",
       "enabledMarkerTopics": [],
       "customMarkerTopicOptions": [],
       "scale": 0.2,
       "transformMarkers": true,
       "synchronize": false,
-      "mode": "fit",
-      "zoomPercentage": 87.22222222222223,
+      "mode": "other",
+      "zoomPercentage": 52.483593750000004,
       "offset": [
-        196.33333333333331,
-        0
+        -44.559375000000045,
+        97.13679687499999
       ]
+    },
+    "Note!2sf9lq5": {
+      "noteText": "Point cloud"
+    },
+    "3D Panel!1rvg79l": {
+      "checkedKeys": [
+        "t:/tf",
+        "ns:/tf:laser_frame",
+        "ns:/tf:Cam1_rx_ry",
+        "ns:/tf:Cam1_z_rx",
+        "ns:/tf:Cam1_ry_rz",
+        "ns:/tf:Cam1_rz_link",
+        "ns:/tf:Cam1_x_y",
+        "ns:/tf:Base_Gripper",
+        "ns:/tf:Cam1_y_z",
+        "ns:/tf:Lidar",
+        "ns:/tf:link1",
+        "ns:/tf:link2",
+        "ns:/tf:link3",
+        "ns:/tf:link4",
+        "ns:/tf:imu_base",
+        "ns:/tf:Base",
+        "t:/map",
+        "t:/octomap/points",
+        "name:Topics",
+        "t:/detections_3d",
+        "ns:/tf:link5",
+        "ns:/tf:link6",
+        "ns:/tf:link_base",
+        "ns:/tf:map"
+      ],
+      "expandedKeys": [
+        "t:/detect_grasps_server_samples/plot_grasps",
+        "t:/detections_3d",
+        "t:/gpd_finger_markers",
+        "t:/gpd_pose_test",
+        "t:/map",
+        "t:/move_base/GlobalPlanner/plan",
+        "t:/move_base/GlobalPlanner/potential",
+        "t:/move_base/TebLocalPlannerROS/global_plan",
+        "t:/move_base/TebLocalPlannerROS/local_plan",
+        "t:/move_base/TebLocalPlannerROS/teb_markers",
+        "t:/move_base/TebLocalPlannerROS/via_points",
+        "t:/move_base/current_goal",
+        "t:/move_base/global_costmap/costmap",
+        "t:/move_base/global_costmap/footprint",
+        "t:/move_base/local_costmap/costmap",
+        "t:/move_base/local_costmap/footprint",
+        "t:/move_base_simple/goal",
+        "t:/move_group/display_contacts",
+        "t:/move_group/display_cost_sources",
+        "t:/move_group/display_grasp_markers",
+        "t:/move_group/filtered_cloud",
+        "t:/octomap/points",
+        "t:/pc2ls/scan",
+        "t:/planning_pose",
+        "t:/pose_debug",
+        "t:/pose_pickup/goal",
+        "t:/pose_place/goal",
+        "t:/scan",
+        "t:/sonar_cloudpoint",
+        "t:/test_pc_1",
+        "t:/test_pc_2",
+        "t:/tf_static",
+        "t:/zed2/scan",
+        "t:/zed2/zed_node/path_map",
+        "t:/zed2/zed_node/path_odom",
+        "t:/zed2/zed_node/plane_marker",
+        "t:/zed2/zed_node/point_cloud/cloud_registered",
+        "t:/zed2/zed_node/point_cloud/ds_cloud_registered",
+        "t:/zed2/zed_node/pose"
+      ],
+      "followTf": null,
+      "cameraState": {
+        "distance": 4.654877827444426,
+        "perspective": true,
+        "phi": 1.0066747591421292,
+        "targetOffset": [
+          -1.455341279700782,
+          1.069586553140587,
+          0
+        ],
+        "thetaOffset": -0.724806878954176,
+        "fovy": 0.7853981633974483,
+        "near": 0.01,
+        "far": 5000
+      },
+      "modifiedNamespaceTopics": [
+        "/tf",
+        "/move_base/TebLocalPlannerROS/teb_markers"
+      ],
+      "pinTopics": false,
+      "settingsByKey": {},
+      "autoSyncCameraState": false,
+      "autoTextBackgroundColor": true
     }
   },
   "globalVariables": {},
